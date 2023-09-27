@@ -1,13 +1,18 @@
+<meta charset = "UTF-8">
 <script>
     //Problema: Peça para o usuário informar um número inteiro.
     //Escreva todos os números na tela, até o número informado pelo usuário, colocando um número em cada linha e começando do número 1!
 
     //Entrada
-
+    const numero = Number(prompt(`Insira um número inteiro`));
     
+    let todosNum = [];
     //Processamento
-    
+    for (let index = 1; index <= numero; index++) {
+        todosNum.push(index);
+    }
     
     //Saída
+    document.write(`Números até ${numero}: ${todosNum}`)
 
 </script>
