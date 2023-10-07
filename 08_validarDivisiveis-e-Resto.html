@@ -5,15 +5,18 @@
     */
 
     //ENTRADA
-
-
-    //ENTRADA
-
-    
+    let numeros = [];    
     //PROCESSAMENTO
-    
+    for (let i = 1000; i <= 1999; i++) {
+        if ((i % 11 == 5) == true) {
+            numeros.push(i);
+        } else {
+            i = i
+        }
+        
+    }
     
     //SAÍDA
-    
+    document.write(`Números que, divididos por 11, dão resto 5: ${numeros.join(", ")}.`);
 
 </script>

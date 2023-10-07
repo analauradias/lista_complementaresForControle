@@ -8,12 +8,20 @@
     */
 
     //ENTRADA
-
+    let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
     
+    let menor = [];
+    let maior = [];
     //PROCESSAMENTO
-    
+    for (const numeros of listaDeNumeros) {
+        if(numeros < 50){
+            menor.push(numeros)
+        } else{
+            maior.push(numeros)
+        }
+    }
     
     //SAÍDA
-    
+    document.write(`<p>Números abaixo de 50: ${menor.join(", ")} (${menor.length/listaDeNumeros.length}%)</p> <p>Números maiores de 50: ${maior.join(", ")}(${maior.length/listaDeNumeros.length}%)</p>`)
 
 </script>
