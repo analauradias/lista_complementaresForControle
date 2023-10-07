@@ -11,10 +11,22 @@
     */
 
     //ENTRADA
+    const numero = Number(prompt(`Insira o número que você deseja a tabuada`));
+    const inicio = Number(prompt(`Insira o número pelo qual você deseja iniciar a tabuada`));
+    const fim = Number(prompt(`Insira o número pelo qual você deseja terminar a tabuada`));
 
     
     //PROCESSAMENTO
-    
+    for (let i = inicio; i <= fim; i++) {
+
+        if(i % 2 != 0){ 
+            let tabuada = numero * i;
+
+            document.write(`<p>${numero}x${i} = ${tabuada}</p>`)
+        } else {
+            i = i;
+        }
+    }
     
     //SAÍDA
     
