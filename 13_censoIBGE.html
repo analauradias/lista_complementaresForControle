@@ -12,12 +12,24 @@
     */
 
     //ENTRADA
+    let salarios = [1200, 2500, 3000, 9000, 850, 4000, 1500, 2300, 3800, 1600];
+    let numeroDeFilhos = [1, 2, 2, 1, 3, 2, 3, 3, 0, 4];
 
-    
+    let somaSalario = 0;
+    let somaFilhos = 0;
+    let ate3Mil = []; 
     //PROCESSAMENTO
-    
-    
+    for (const totalSalarios of salarios) {
+        somaSalario += totalSalarios;
+
+        if (totalSalarios <= 3000)  ate3Mil.push(totalSalarios);
+         
+    }
+    for (const totalFilhos of numeroDeFilhos) {
+        somaFilhos += totalFilhos;
+    }
     //SAÍDA
-    
+    document.write(`<p>Média de salário das famílias ali residentes: R$${somaSalario / salarios.length}</p> <p>Média do número de filhos: ${(somaFilhos / numeroDeFilhos.length).toFixed(0)}</p> 
+    <p>Maior salário: ${Math.max(...salarios).toFixed(2).replace(".",",")} </p> <p>Percentual de famílias com salário até R$ 3.000,00: ${(ate3Mil.length * salarios.length) / 100}%</p>`)
 
 </script>
