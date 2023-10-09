@@ -11,12 +11,28 @@
     */
 
     //ENTRADA
-
+    let v = [];
+    let p = [];
+    let total = 0;
+    let prestacao = 0;
     
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= 10; i++) {
+        const transacoes = Number(prompt(`Insira o valor da transação ${i}`));
+        const identificador = prompt(`Esta compra foi a V-Vista ou P-Parcelada`).toLowerCase();
+        
+        if(identificador == 'v'){
+            v.push(transacoes);
+            total += transacoes;
+        } else {
+            p.push(transacoes);
+            total += transacoes;
+            prestacao += transacoes;
+        }
+     
+    }
     
     //SAÍDA
-    
+    document.write(`<p>Total de compras à vista: ${v.length}</p> <p>Total de compras parceladas: ${p.length}</p> <p>Total das compras efetuadas: ${total}</p> <p>Valor da primeira prestação das compras a prazo: ${(prestacao/3).toFixed(2)}</p>`)
 
 </script>

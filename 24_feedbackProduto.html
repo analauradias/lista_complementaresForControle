@@ -11,16 +11,33 @@
     */
 
     //ENTRADA
-
+    let sim = [];
+    let nao = [];
+    let mulheresSim = [];
+    let homens = [];
+    let homensNao = [];
 
     //PROCESSAMENTO
-    //ENTRADA
+    for (let i = 1; i <= 10; i++) {
+        const genero = prompt(`Insira qual seu genêro: H-Homem ou M-Mulher`).toLowerCase();
+        const expectativas = prompt(`O produto atendeu as suas expectativas? S-Sim ou N-Não`).toLowerCase();
 
-    
-    //PROCESSAMENTO
-    
-    
+        if (genero == 'm' && expectativas == 's') {
+            sim.push(expectativas);
+            mulheresSim.push(expectativas);
+        } else if (genero == 'm' && expectativas == 'n') {
+            nao.push(expectativas);
+        } else if (genero == 'h' && expectativas == 'n') {
+            nao.push(expectativas);
+            homensNao.push(expectativas);
+            homens.push(expectativas)
+        } else {
+            sim.push(expectativas);
+            homens.push(expectativas)
+        }
+    }
+
     //SAÍDA
-    
+    document.write(`<p>Número de pessoas que respondeu sim: ${sim.length}</p> <p>Número de pessoas que respondeu não: ${nao.length}</p> <p>Número de mulheres que respondeu sim: ${mulheresSim.length}</p> <p>Percentual de homens que responderam não: ${(homensNao.length*100)/homens.length}%</p>`)
 
 </script>

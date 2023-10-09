@@ -14,12 +14,35 @@
     */
 
     //ENTRADA
+    let fator1 = 0;
+    let fator2 = 0;
+    let fator3 = 0;
+    let fator4 = 0;
+    let fator5 = 0;
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let i = 1; i <= 10; i++) {
+        const idades = prompt(`Insira a idade das pessoas:`);
+
+        if (idades <= 15) {
+            fator1++;
+        } else if (idades <= 30) {
+            fator2++;
+        } else if (idades <= 45) {
+            fator3++;
+        } else if (idades <= 60) {
+            fator4++;
+        } else {
+            fator5++;
+        }
+    }
     //SAÍDA
-    
+    document.write(`<p>Quantidade de pessoas:</p>
+     Faixas etárias: <br>
+     Até 15 anos - ${fator1} (${(fator1*100)/10}%) <br>
+     De 16 a 30 anos - ${fator2} (${(fator2*100)/10}%) <br>
+     De 31 a 45 anos - ${fator3} (${(fator3*100)/10}%) <br>
+     De 46 a 60 anos - ${fator4} (${(fator4*100)/10}%) <br>
+     Acima de 61 anos - ${fator5} (${(fator5*100)/10}%) `) 
 
 </script>

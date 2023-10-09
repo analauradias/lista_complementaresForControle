@@ -30,6 +30,6 @@
     }
     //SAÍDA
     document.write(`<p>Média de salário das famílias ali residentes: R$${somaSalario / salarios.length}</p> <p>Média do número de filhos: ${(somaFilhos / numeroDeFilhos.length).toFixed(0)}</p> 
-    <p>Maior salário: ${Math.max(...salarios).toFixed(2).replace(".",",")} </p> <p>Percentual de famílias com salário até R$ 3.000,00: ${(ate3Mil.length * salarios.length) / 100}%</p>`)
+    <p>Maior salário: ${Math.max(...salarios).toFixed(2).replace(".",",")} </p> <p>Percentual de famílias com salário até R$ 3.000,00: ${(ate3Mil.length * 100) / salarios.length}%</p>`)
 
 </script>

@@ -9,12 +9,30 @@
     */
 
     //ENTRADA
-
+    let qtdM = [];
+    let qtdH = [];
+    let mediaPessoas = 0;
+    let mediaMulher = 0;
+    let mediaHomem = 0;
     
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= 10; i++) {
+        const idades = Number(prompt(`Insira a idade da pessoa:`));
+        const HouM = prompt(`A pessoa que você inseriu a idade é H-Homem ou M-Mulher`).toLowerCase();
+        
+        if(HouM == 'm'){
+            qtdM.push(idades);
+            mediaMulher += idades;
+            mediaPessoas += idades;
+        } else{
+            qtdH.push(idades);
+            mediaHomem += idades;
+            mediaPessoas += idades;
+        }
+    }
     
     //SAÍDA
-    
+    document.write(`<p>Média das idades das 10 pessoas: ${mediaPessoas/10}</p> <p>Idade média das mulheres: ${mediaMulher/qtdM.length}</p> 
+    <p>Idade média dos homens: ${mediaHomem/qtdH.length}</p>`)
 
 </script>

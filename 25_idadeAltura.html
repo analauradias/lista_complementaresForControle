@@ -9,12 +9,34 @@
     */
 
     //ENTRADA
-
+    let mediaTotal = 0;
+    let qtd50 = [];
+    let qtd25 = [];
+    let qtdTotal = [];
+    let mediaPeso50 = 0;
+    let mediaPeso25 = 0; 
     
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= 10; i++) {
+        const idade = Number(prompt(`Insira a idade da pessoa ${i}`));
+        const peso = Number(prompt(`Insira o peso da pessoa ${i}`));
+        
+        if (idade > 25){
+            mediaPeso25 += peso;
+            mediaTotal += peso;
+            qtd25.push(peso);
+           
+        } else if (idade < 50){
+            mediaPeso50 += peso;
+            mediaTotal += peso;
+            qtd50.push(peso);
+        } else{
+            mediaTotal += peso;
+            qtdTotal.push(peso);
+        }
+    }
     
     //SAÍDA
-    
+    document.write(`<p>Média do peso das pessoas que possuem mais de 50 anos: ${mediaPeso50/qtd50.lenght}</p> <p>Média do peso das pessoas que possuem menos de 25 anos: ${mediaPeso25/qtd25.lenght}</p> <p>Média do peso de todas as pessoas: ${mediaTotal/qtdTotal.lenght} </p>`)
 
 </script>
