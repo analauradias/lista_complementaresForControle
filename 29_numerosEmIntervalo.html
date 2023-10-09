@@ -6,12 +6,18 @@
     */
 
     //ENTRADA
-
+    let entre = [];
     
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= 10; i++) {
+        const num = Number(prompt(`Ìnforme o ${i} número`));
+        
+        if(num > 100 && num < 200){
+            entre.push(num);
+        }
+    }
     
     //SAÍDA
-    
+    document.write(`quantidade de números que estão no intervalo: ${entre.length}. Percentagem: ${entre.length*10}%`)
 
 </script>
