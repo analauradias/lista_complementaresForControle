@@ -8,12 +8,15 @@
     */
 
     //ENTRADA
-
-    
+    const qtd = Number(prompt(`Quantas pessoas terão sua medida informada`));
+    let alturas = [];
     //PROCESSAMENTO
-    
-    
+    for (let i = 1; i <= qtd; i++) {
+        const altura = Number(prompt(`Informe a altura`));
+        alturas.push(altura);
+    }
+    alturas.sort((a,b) => b-a);
     //SAÍDA
-    
+    document.write(`Maior altura: ${alturas[0]}<br> Menor altura: ${altura[altura.lenght - 1]}`);
 
 </script>
