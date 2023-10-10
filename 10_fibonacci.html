@@ -8,12 +8,18 @@
     */
 
     //ENTRADA
-
+    let fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+    const qtd = Number(prompt(`Quantos números deseja adicionar na seqência de Fibonacci?`));
     
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= qtd; i++) {
+        let ultimo = fibonacci[fibonacci.length-1];
+        let penultimo = fibonacci[fibonacci.length-2];
+        let soma = ultimo+penultimo;
+        fibonacci.push(soma);
+    }
     
     //SAÍDA
-    
+    document.write(`${fibonacci.join(", ")}`);
 
 </script>
