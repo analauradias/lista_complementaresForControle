@@ -17,11 +17,17 @@
     //ENTRADA
 
     let produtos = ['tomate',"batata","batata-doce","alface","cebola","cebolinha","beterraba"];
+    let multiplicacao = [3.9, 3.4, 4.7, 1.5, 2.9, 1.4, 4.1];
+    let total = 0;
     //PROCESSAMENTO
-    for (const produto of produtos) {
-        
+    for (let c = 0; c < produtos.length; c++) {
+    let item = Number(prompt(`Informe a quantia do item "${produtos[c]}" que foi vendida`));
+    total += item * multiplicacao[c];
     }
-    
+
     //SAÍDA
-    
+    document.write(`R$${total.toFixed(2)}`);
+    // 10 = 10 + 2;
+    // 10 += 2;
+    // 10++ = 11;    
 </script>

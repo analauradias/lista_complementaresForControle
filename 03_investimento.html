@@ -8,11 +8,19 @@
     */
 
     //ENTRADA
-
-    
+    let valorInicial = 100;
+    let valorFinal = 0;
     //PROCESSAMENTO
-    
-    
+    for (let index = 1; index <= 96; index++) {
+        valorFinal += valorInicial * 1.018;
+        if (index === 24) {
+            document.write(`<p> Valor ao final de 24 meses: ${valorFinal}</p>`);
+        } if (index === 48) {
+            document.write(`<p> Valor ao final de 48 meses: ${valorFinal}</p>`);
+        } if (index == 96) {
+            document.write(`<p> Valor ao final de 96 meses: ${valorFinal}</p>`);
+        }
+    }
     //SAÍDA
-    
+
 </script>
