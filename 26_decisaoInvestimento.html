@@ -9,12 +9,20 @@
     */
 
     //ENTRADA
-
+    const investimento = Number(prompt(`Insira o valor que você deseja investir`));
     
+    let poupanca = investimento;
+    let poupancaPlus = investimento;
+    let fundos = investimento;
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= 36; i++) {
+        poupanca *= 1.015;
+        poupancaPlus *= 1.02;
+        fundos *= 1.04;
+        
+    }
     
     //SAÍDA
-    
+    document.write(`Valor final previsto: <br> Poupança = ${poupanca.toFixed(2)} <br> Poupança Plus = ${poupancaPlus.toFixed(2)} <br> Fundos de renda fixa: ${fundos.toFixed(2)} `)
 
 </script>
