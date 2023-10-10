@@ -7,12 +7,14 @@
     */
 
     //ENTRADA
-
-    
+    let mes = 1;
     //PROCESSAMENTO
-    
-    
+    for (let invest = 10000; invest >= 0; mes++) {
+        invest -= 300;
+        invest = invest*1.03;
+        
+    }
     //SAÍDA
-    
+    document.write(`A pessoa terá gasto todo o dinheiro em ${mes} meses`);
 
 </script>
