@@ -13,15 +13,33 @@
     //ENTRADA
     const qtd = Number(prompt(`Quantas pessoas irão avaliar o filme?`));
     
-    let  
+    let regular = 0;
+    let qtdRegular = [];
+    let bom = 0;
+    let qtdBom = [];
+    let todas = 0; 
+    let total = [];
     //PROCESSAMENTO
     for (let i = 1; i <= qtd; i++) {
-        const idades = Number(prompt(`Insira a idade da pessoa ${i}`));
-        const avaliacao = prompt(`Qual a sua avaliação sobre o filme? R-Regular ou B-Bom`)
+        const idade = Number(prompt(`Insira a idade da pessoa ${i}`));
+        const avaliacao = prompt(`Qual a sua avaliação sobre o filme? R-Regular ou B-Bom`).toLowerCase().trim();
         
+        if (avaliacao == 'r') {
+            regular += idade;
+            todas += idade;
+            qtdRegular.push(idade);
+            total.push(idade);
+        } else{
+            bom += idade;
+            todas += idade;
+            qtdBom.push(idade);
+            total.push(idade);
+        }
     }
     
     //SAÍDA
     
+    document.write(`Média de idade das pessoas que responderam que o filme era REGULAR: ${regular/qtdRegular.length} <br> Média de idade das pessoas que responderam que o filme era BOM: ${bom/qtdBom.length}
+    <br> Média de idade de todas as pessoas que assistiram ao filme: ${todas/total.length} <br> Percentual de pessoas que classificou o filme como REGULAR: ${(qtdRegular.length*100)/total.length}% <br> Percentual de pessoas que classificou o filme como BOM: ${(qtdBom.length*100)/total.length}%`)
 
 </script>
