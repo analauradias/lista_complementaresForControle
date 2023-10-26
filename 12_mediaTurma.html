@@ -9,13 +9,14 @@
 
     //ENTRADA
     let notasProgramacaoI = [4, 3, 5, 10, 9, 2, 7, 10, 8, 7, 6, 1, 5, 2, 3];
+    let soma = 0;
     //PROCESSAMENTO
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        
+    for (const notas of notasProgramacaoI) {
+        soma += notas;
     }
-    
+    notasProgramacaoI.sort((a, b) => b - a);
+
     //SAÍDA
-    
+    document.write(`Maior média: ${notasProgramacaoI[0]} <br> Menor média: ${notasProgramacaoI[notasProgramacaoI.length - 1]} <br> Média da turma:${(soma / notasProgramacaoI.length).toFixed(2).replace("." , ",")}`)
 
 </script>
