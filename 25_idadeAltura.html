@@ -18,8 +18,8 @@
     
     //PROCESSAMENTO
     for (let i = 1; i <= 10; i++) {
-        const idade = Number(prompt(`Insira a idade da pessoa ${i}`));
-        const peso = Number(prompt(`Insira o peso da pessoa ${i}`));
+        let idade = Number(prompt(`Insira a idade da pessoa ${i}`));
+        let peso = Number(prompt(`Insira o peso da pessoa ${i}`));
         
         if (idade > 25){
             mediaPeso25 += peso;
