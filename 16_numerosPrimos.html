@@ -8,12 +8,20 @@
     */
 
     //ENTRADA
-
-    
+    let qtd = Number(prompt(`Insira quantos números primos você deseja descobrir`));
+    let primos =[];
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= qtd; i++) {
+        for (let i = 1; i <= primos.length; i++) {
+            if(i % 1 == 0 && i % i == 0 ){
+                primos.push(i);
+            }
+            
+        }
+        
+    }
     
     //SAÍDA
-    
+    document.write(`${primos.join(", ")}`)
 
 </script>
