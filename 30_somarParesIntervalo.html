@@ -11,12 +11,20 @@
     */
 
     //ENTRADA
-
-    
+    let inferior = Number(prompt(`Insira o limite inferior`));
+    let superior = Number(prompt(`Insira o limite superior`));
+    let num = [];
+    let soma = 0;
     //PROCESSAMENTO
-    
+    for (let i = inferior; i < superior; i++) {
+        if (i % 2 == 0) {
+            num.push(i);
+            soma += i;
+        }
+        
+    }
     
     //SAÍDA
-    
+    document.write(`Pares no intervalo: ${num.join(", ")} <br> Soma = ${soma}`);
 
 </script>
